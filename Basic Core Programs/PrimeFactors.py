@@ -1,4 +1,5 @@
 import math
+
 def check(num):
     print("Prime Factors are : ",end="")
     while (num%2) == 0:
@@ -10,6 +11,7 @@ def check(num):
             num //=i
     if num>2:
         print(num,end="")
+
 try:
     n = int(input("Enter the number : "))
     check(n)
