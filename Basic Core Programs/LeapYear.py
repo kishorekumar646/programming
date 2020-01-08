@@ -1,4 +1,4 @@
-def check(year):
+def check(year):                 
     if (year%4) == 0:
         if (year%100) == 0:
             if (year%400) == 0:
@@ -9,6 +9,7 @@ def check(year):
             return True
     else:
         return False
+
 try:
     leap = int(input("Enter year : "))
     if check(leap):
