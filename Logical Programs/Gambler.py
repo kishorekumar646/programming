@@ -4,7 +4,7 @@ stake = int(input("enter stake = "))
 goal = int(input("enter goal = "))
 n = int(input("enter trails = "))
 while(n!=0):
-    r = random.randint(0,1)
+    r = random.randint(0,1)  #here generate random integers 
     print(r)
     if r==1:
         stake+=1

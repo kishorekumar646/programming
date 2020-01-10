@@ -1,16 +1,20 @@
 import random
-def find(num,c,m,a):
+
+def print_distinct_couponNumbers(num,c,m,a):
     while (m!=num):
         x = random.randint(0,num)
         c+=1
         if x not in a:
             a.append(x)
             m+=1
-    print(a)
-    print(c)
+    print("Distinct Coupon List : ",a)
+    print("Iteration for to print the Coupon numbers : ",c)
 
-a = []
-c=0
-m=0
-num = int(input("enter num = "))
-find(num,c,m,a)
+try:
+    couponList = []
+    iteration_count = 0
+    couponNumbersCount = 0
+    distinct_couponNumber_Count = int(input("enter num = "))
+    print_distinct_couponNumbers(distinct_couponNumber_Count,iteration_count,couponNumbersCount,couponList)
+except ValueError:
+    print("Enter Integers only ! ")

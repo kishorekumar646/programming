@@ -1,10 +1,12 @@
 class TicTacToe:
+
     X,O,EMPTY = 1,-1,0
     board = [[0 for i in range(3)] for j in range(3)]
     player = X
     isEmpty = True
 
-    def insert(self,x,y):
+    #inserting the board positions
+    def insert(self,x,y):   
         if (x<0) or (x>2) or (y<0) or (y>2):
             print("Invalid Board Position")
             return
@@ -13,6 +15,8 @@ class TicTacToe:
             return
         self.board[x][y] = self.player
         self.player = -self.player
+
+    #Displaying the board
     def displayBoard(self):
         self.isEmpty=False
         print(self.board,"\n")
@@ -30,6 +34,8 @@ class TicTacToe:
             if i<2:
                 print("\n-----------")
         print("\n")
+
+    #checking the winner
     def isWin(self,player):
         return (
             (self.board[0][0] + self.board[0][1] + self.board[0][2] == player*3) or
@@ -41,16 +47,20 @@ class TicTacToe:
             (self.board[0][0] + self.board[1][1] + self.board[2][2] == player*3) or
             (self.board[2][0] + self.board[1][1] + self.board[0][2] == player*3) 
         )
+
+    #display the winner
     def displayWinner(self):
         if self.isWin(self.X):
             print("\n  X WINNER  \n")
-            self.isEmpty=False;
+            self.isEmpty=False
         elif self.isWin(self.O):
             print("\n  O WINNER  \n")
             self.isEmpty=False
         else:
             if (self.isEmpty == False):
                 print ("\n  XO DRAW  \n")
+
+# here start the game                
 t = TicTacToe()
 while t.isEmpty:
     print("Player X turn" if t.player == t.X else "Player O turn")
