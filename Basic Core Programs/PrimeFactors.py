@@ -1,6 +1,6 @@
 import math
 
-def check(num):
+def printing_primeFactorsNumbers(num):
     print("Prime Factors are : ",end="")
     while (num%2) == 0:
         print(2,end=" ")
@@ -13,8 +13,8 @@ def check(num):
         print(num,end="")
 
 try:
-    n = int(input("Enter the number : "))
-    check(n)
+    taking_input = int(input("Enter the number : "))
+    printing_primeFactorsNumbers(taking_input)
     print()
 except ValueError:
-    print("Input wrong!")
+    print("Input should be an Integer ! ")

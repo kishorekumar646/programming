@@ -1,19 +1,19 @@
 import random
 
 try:
-	n = int(input("Enter the number : "))
-	tail = 0
-	head = 0
-	for i in range(n):
-	        r1 = round(random.random(),1)
-	        print(r1)
-	        if r1<0.5:
-	            tail=tail+1
+	number_of_times = int(input("Enter the number : "))
+	tails_count = 0
+	heads_count = 0
+	for i in range(number_of_times):
+	        taking_random_numer = round(random.random(),1)  #here taking the random number in float
+	        print(taking_random_numer)
+	        if taking_random_numer<0.5:
+	            tails_count=tails_count+1
 	        else:
-	            head=head+1
+	            heads_count=heads_count+1
 	# print (tail,"  ",head)
-	tail = (tail*100)//n
-	head = (head*100)//n
-	print("tails percentage : {0}\nhead percentage : {1} ".format(tail,head))
+	tails_percentage = (tails_count*100)//number_of_times  #hera calculating tails percentage
+	heads_percentage = (heads_count*100)//number_of_times  #hera calculating heads percentage
+	print("tails percentage : {0}\nhead percentage : {1} ".format(tails_percentage,heads_percentage))
 except ValueError:
-	print("Wrong input!")
+	print("It should be an Integer ! ")

@@ -1,4 +1,4 @@
-def check(year):                 
+def ifLeapYear_thenReturnTrue_otherwiseReturnFalse(year):   #here check the leap year are not           
     if (year%4) == 0:
         if (year%100) == 0:
             if (year%400) == 0:
@@ -11,10 +11,10 @@ def check(year):
         return False
 
 try:
-    leap = int(input("Enter year : "))
-    if check(leap):
-        print(leap," is leap year")
+    leap_year_input = int(input("Enter year : "))
+    if ifLeapYear_thenReturnTrue_otherwiseReturnFalse(leap_year_input):
+        print(leap_year_input," is leap year")
     else:
-        print(leap," is not leap year")
+        print(leap_year_input," is not leap year")
 except ValueError:
-    print ("Input format wrong!")
+    print ("It should be an Integer ! ")
