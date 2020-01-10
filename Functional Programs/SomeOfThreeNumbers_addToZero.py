@@ -9,6 +9,6 @@ def findsTriplets(arr):
 	if found == False:
 		print("NOT FOUND")
 
-n = int(input("Enter the size of array : "))
-lst = [int(input()) for i in range(n)]
+taking_sizeOfArray = int(input("Enter the size of array : "))
+lst = [int(input()) for i in range(taking_sizeOfArray)]
 findsTriplets(lst)

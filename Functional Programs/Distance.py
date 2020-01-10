@@ -1,9 +1,11 @@
-
 import math
 
-def distance(a,b):
+def calculateDistance(a,b):
 	return round(math.sqrt(a**2 + b**2),3) 
 
-x = int(input("value of x : "))
-y = int(input("value of y : "))
-print (distance(x,y))
+try:
+	x = int(input("value of x : "))
+	y = int(input("value of y : "))
+	print (calculateDistance(x,y))
+except ValueError:
+	print("\nEnter Integer only ! \n")
