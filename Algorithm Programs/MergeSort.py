@@ -31,8 +31,9 @@ def mergeSort(arr):
     print(arr,end="")
 
 
-n = int(input("Enter the size of array : "))
-lst = [int(input()) for i in range(n)]
+# n = int(input("Enter the size of array : "))
+# lst = [int(input()) for i in range(n)]
+lst=['c','b','a']
 print(lst)
 mergeSort(lst)
 print()
