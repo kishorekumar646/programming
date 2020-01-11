@@ -16,3 +16,4 @@ def vendingMachine_imp(value):
 		return True
 	else:
 		return False
+
