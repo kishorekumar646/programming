@@ -7,6 +7,12 @@ def Anagrams(arr):
             if (i != j) and (sorted(str(i)) == sorted(str(j))):
                 anagram_list.append(i)
     print(anagram_list)
+    Palindrome(anagram_list)
+    
+def Palindrome(ana_list):
+    for i in range(len(ana_list)):
+
+
 
 
 
