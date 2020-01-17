@@ -1,4 +1,10 @@
-def ifLeapYear_thenReturnTrue_otherwiseReturnFalse(year):   #here check the leap year are not           
+"""   I/P   -> Year, ensure it is a 4 digit number.
+      Logic -> Determine if it is a Leap Year.
+      O/P   -> Print the year is a Leap Year or not.          """
+
+
+#here check the leap year are not 
+def ifLeapYear_thenReturnTrue_otherwiseReturnFalse(year):          
     if (year%4) == 0:
         if (year%100) == 0:
             if (year%400) == 0:
