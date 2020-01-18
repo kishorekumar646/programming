@@ -1,16 +1,32 @@
-def insertionSort(arr):
-    for i in range(1, len(arr)):
-        key = arr[i]
-        j = i-1
-        while (j>=0 and arr[j] > key):
-            arr[j+1] = arr[j]
-            j = j-1
-        arr[j+1] = key
-    print(arr)
+"""
+
+    Reads in strings and prints them in sorted order using insertion sort.
+
+"""
+
+def insertionSort(array_list):
+    
+    for index in range(1, len(array_list)):
+        
+        key = array_list[index]
+        position = index-1
+        
+        while (position >= 0 and array_list[position] > key):
+        
+            array_list[position+1] = array_list[position]
+            position = position-1
+        
+        array_list[position+1] = key
+    
+    print(array_list)
+
 
 try:
-    size = int(input("Enter the array size : "))
-    list_array = [str(input()) for i in range(size)]
+    
+    list_size = int(input("Enter the array size : "))
+    list_array = [str(input()) for take_list in range(list_size)]
     insertionSort(list_array)
+
 except ValueError:
+
     print("Wrong Input")
