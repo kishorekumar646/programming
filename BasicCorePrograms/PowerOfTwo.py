@@ -11,8 +11,8 @@ try:
     # lambda arguments : Expression , map(fun,iter)
     result = list(map(lambda x:2 ** x,range(term)))
     
-    for i in range(term):
-        print("2 power of ",i," is : ",result[i])
+    for series in range(term):
+        print("2 power of ",series," is : ",result[series])
 
 except ValueError:
    
