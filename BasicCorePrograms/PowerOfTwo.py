@@ -5,11 +5,15 @@
       O/P   -> Print the power of 2 table.           """
 
 try:
+
     term = int(input("Enter the number : "))
 
     # lambda arguments : Expression , map(fun,iter)
     result = list(map(lambda x:2 ** x,range(term)))
+    
     for i in range(term):
         print("2 power of ",i," is : ",result[i])
+
 except ValueError:
+   
     print("Input wrong!")
