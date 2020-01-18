@@ -1,30 +1,24 @@
+"""
+    Take a range of 0 - 1000 Numbers and find the Prime numbers in that range.
 
+"""
 
-def Anagrams(arr):
-    anagram_list = []
-    for i in arr:
-        for j in arr:
-            if (i != j) and (sorted(str(i)) == sorted(str(j))):
-                anagram_list.append(i)
-    print(anagram_list)
-    Palindrome(anagram_list)
+def Prime_numbers(start,end):
+
+    prime_list = []
     
-def Palindrome(ana_list):
-    for i in range(len(ana_list)):
+    for take_number in range(start,end+1):
+        if take_number > 1:
+            for check in range(2,take_number):
+                if (take_number % check) == 0:
+                    break
+            else:
+                prime_list.append(take_number)
+  
+    print(prime_list)
 
+try:
+    Prime_numbers(0,1000)
 
-
-
-
-start = int(input("Enter range number\nstart : "))
-end = int(input("end : "))
-lst = []
-for i in range(start,end+1):
-    if i > 1:
-        for j in range(2,i):
-            if (i % j) == 0:
-                break
-        else:
-            lst.append(i)
-print(lst)
-Anagrams(lst)
+except ValueError:
+    print("Error")
