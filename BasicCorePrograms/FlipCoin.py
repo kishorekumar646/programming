@@ -5,10 +5,11 @@ import random
      O/P   -> Percentage of Head vs Tails                                 """
 
 try:
+
 	number_of_times = int(input("Enter the number : "))
 	tails_count = 0
 	heads_count = 0
-	for i in range(number_of_times):
+	for number in range(number_of_times):
 
 			#here taking the random number in float
 	        taking_random_numer = round(random.random(),1)
@@ -17,7 +18,6 @@ try:
 	            tails_count=tails_count+1
 	        else:
 	            heads_count=heads_count+1
-	# print (tail,"  ",head)
 
 	#here calculating tails percentage
 	tails_percentage = (tails_count*100)//number_of_times
@@ -25,5 +25,7 @@ try:
 	#here calculating heads percentage
 	heads_percentage = (heads_count*100)//number_of_times
 	print("tails percentage : {0}\nhead percentage : {1} ".format(tails_percentage,heads_percentage))
+
 except ValueError:
+	
 	print("It should be an Integer ! ")
