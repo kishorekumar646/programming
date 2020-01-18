@@ -2,6 +2,6 @@
       Logic -> Replace UserName with the proper name
       O/P   -> Print the String with User Name      """
 
-name = str(input("Enter your name : "))
+take_name = str(input("Enter your name : "))
 string = "Hello username, How are you?"
-print(string.replace("username",name,1))
+print(string.replace("username",take_name,1))
