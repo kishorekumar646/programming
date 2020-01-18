@@ -4,23 +4,23 @@
 
 """
 
-def BinarySearch(arr,search):
+def BinarySearch(array_list,search_name):
 
-    big,end = 0,len(arr)-1
-    arr.sort()
+    start,end = 0,len(array_list)-1
+    array_list.sort()
     
-    while big <= end:
+    while start <= end:
     
-        mid = (big+end) // 2
+        mid_value = (start+end) // 2
         
-        if arr[mid] == search:
+        if array_list[mid_value] == search_name:
             return True
         
-        elif arr[mid] < search:
-            big = mid + 1
+        elif array_list[mid_value] < search_name:
+            start = mid_value + 1
         
         else:
-            end = mid - 1
+            end = mid_value - 1
     
     return False
 
