@@ -1,39 +1,60 @@
+"""
 
+    a program to do Merge Sort of list of Strings. 
 
-def mergeSort(arr):
-    if len(arr) > 1:
-        mid = len(arr) // 2
-        L = arr[:mid]
-        R = arr[mid:]
+"""
 
-        mergeSort(L)
-        mergeSort(R)
+def mergeSort(array_list):
 
-        i = j = k = 0
+    if len(array_list) > 1:
+        
+        mid_value = len(array_list) // 2
+        left = array_list[:mid_value]
+        right = array_list[mid_value:]
 
-        while i < len(L) and j < len(R):
-            if L[i] < R[j]:
-                arr[k] = L[i]
-                i += 1
+        mergeSort(left)
+        mergeSort(right)
+
+        left_halves = right_halves = merge_halves = 0
+
+        while left_halves < len(left) and right_halves < len(right):
+            
+            if left[left_halves] < right[right_halves]:
+                array_list[merge_halves] = left[left_halves]
+                left_halves += 1
+            
             else:
-                arr[k] = R[j]
-                j += 1
-            k +=1
+                array_list[merge_halves] = right[right_halves]
+                right_halves += 1
+            
+            merge_halves +=1
 
-        while i < len(L):
-            arr[k] = L[i]
-            i += 1
-            k += 1
-        while j < len(R):
-            arr[k] = R[j]
-            j += 1
-            k += 1
-    print(arr,end="")
+        while left_halves < len(left):
+            
+            array_list[merge_halves] = left[left_halves]
+            left_halves += 1
+            merge_halves += 1
+        
+        while right_halves < len(right):
+            
+            array_list[merge_halves] = right[right_halves]
+            right_halves += 1
+            merge_halves += 1
+    
+    print(array_list,end="")
 
 
-# n = int(input("Enter the size of array : "))
-# lst = [int(input()) for i in range(n)]
-lst=['c','b','a']
-print(lst)
-mergeSort(lst)
-print()
+try:
+
+    list_size = int(input("Enter the size of lisr : "))
+    
+    data_list = [str(input()) for take_list in range(list_size)]
+    
+    print(data_list)
+    
+    mergeSort(data_list)
+    print()
+
+except ValueError:
+
+    print("Error")
