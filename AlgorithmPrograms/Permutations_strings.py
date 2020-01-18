@@ -1,6 +1,6 @@
 from itertools import permutations
 
-def permutationofstring(string):
+def permutation_of_string(string):
     
     permlist = permutations(string)
     
@@ -10,7 +10,7 @@ def permutationofstring(string):
 
 try:
     string_input = str(input("Enter the string : "))
-    permutationofstring(string_input)
+    permutation_of_string(string_input)
 
 except ValueError:
     print("Error")
