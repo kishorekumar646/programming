@@ -89,14 +89,18 @@ class LinkedList:
             return None
 
         if self.head.next == None:
+            element = self.head.data
             self.head = None
-            return None
+            return element
 
         current = self.head
         while current.next.next:
             current = current.next
 
+        element = (current.next).data
         current.next = None
+        
+        return element
 
     def delete(self,key):
         
@@ -138,15 +142,14 @@ class Stack:
     def __init__(self):
 
         self.stack_list = []
-        self.top = 0
+        self.top = -1
 
     def push(self,item):
-        
-        self.stack_list.append(item)
         self.top += 1
+        self.stack_list.append(item)
 
     def pop(self):
-        if self.stack_list == None:
+        if self.top == -1:
             return None
         else:
             last_element = self.stack_list[self.top]
@@ -154,10 +157,33 @@ class Stack:
             return last_element
 
     def peek(self):
-        pass
+        
+        if self.top == -1:
+            return None
+        
+        else:
+            return self.stack_list[self.top]
 
     def isEmpty(self):
-        pass
+        
+        if self.stack_list == None:
+            return False
+        
+        else:
+            return True
+
 
     def size(self):
-        pass
+        
+        return self.top
+
+    def dispaly_stack_list(self):
+
+        print("Stack : ",end="")
+        if self.top == -1:
+            print("Empty")
+            return
+        for numbers in range(self.top+1):
+            print(self.stack_list[numbers],end=" ")
+        print()
+        return
