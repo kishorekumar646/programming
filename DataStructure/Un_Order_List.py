@@ -1,9 +1,23 @@
 from Utility import utility
 
-linked_list = utility.LinkedList()
 
-linked_list.add(10)
-linked_list.add(20)
-linked_list.add(30)
 
-linked_list.dispalyList()
+try:
+    
+    file_list = open("Un_Order_Lista_Data.txt","r+").read().split(" ")
+    
+    linked_list = utility.LinkedList()
+    for word in file_list:
+        linked_list.add(word)
+    
+    linked_list.dispalyList()
+    
+    linked_list.pop()
+    linked_list.dispalyList()
+
+    linked_list.pop()
+    linked_list.dispalyList()
+
+except FileNotFoundError:
+    
+    print("Error")
