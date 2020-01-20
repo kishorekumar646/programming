@@ -67,10 +67,12 @@ try:
                 f.close()
         elif choice == 4:
 
-            linked_list.pop()
-
+            element = linked_list.pop()
+            print("Delete eliment is : ",element)
+            
         elif choice == 5:
             b = False
+            print("\n\t ----------  successfully stored data  -----------\n")
             
 
         else:
