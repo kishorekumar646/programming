@@ -1,9 +1,18 @@
 from Utility import utility
 
-linked_list = utility.LinkedList()
 
-linked_list.add(10)
-linked_list.add(20)
-linked_list.add(30)
+try:
 
-linked_list.dispalyList()
+    file_list = open("Order_List_Data.txt","r+").read().split(" ")
+    
+    linked_list = utility.LinkedList()
+    for digit in file_list:
+        linked_list.add(digit)
+
+    linked_list.dispalyList()
+    linked_list.pop()
+    linked_list.dispalyList()
+
+except FileNotFoundError:
+
+    print("File Not Found")
