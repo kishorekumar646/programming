@@ -33,7 +33,20 @@ class LinkedList:
         pass
 
     def search(self,item):
-        pass
+        
+        current = self.head
+        
+        if current == None:
+            return None
+        
+        else:
+            while current:
+                if current.data == item:
+                    return True
+
+                current = current.next
+            
+            return False
 
     def isEmpty(self):
 
@@ -48,7 +61,21 @@ class LinkedList:
         return self.sizeList
 
     def append(self,item):
-        pass
+        
+        node = Node(item)
+        
+        if self.head is None:
+            self.head = node
+            self.sizeList += 1
+        
+        else:
+            last = self.head
+           
+            while last.next:
+                last = last.next
+           
+            last.next = node
+            self.sizeList += 1
 
     def index(self,item):
         pass
@@ -71,8 +98,24 @@ class LinkedList:
 
         current.next = None
 
-    # def pop(self,pos):
-    #     pass
+    def delete(self,key):
+        
+        current = self.head
+
+        if current is not None:
+            if current.data == key:
+                self.head = current.next
+                current = None
+                return
+
+        while current:
+            if current.data == key:
+                break
+            prev = current
+            current = current.next
+
+        prev.next = current.next
+        # current = None
 
     def insertFirst(self,ele):
         
@@ -89,3 +132,32 @@ class LinkedList:
             current = current.next
         
         print("None")
+
+class Stack:
+
+    def __init__(self):
+
+        self.stack_list = []
+        self.top = 0
+
+    def push(self,item):
+        
+        self.stack_list.append(item)
+        self.top += 1
+
+    def pop(self):
+        if self.stack_list == None:
+            return None
+        else:
+            last_element = self.stack_list[self.top]
+            self.top -= 1
+            return last_element
+
+    def peek(self):
+        pass
+
+    def isEmpty(self):
+        pass
+
+    def size(self):
+        pass
