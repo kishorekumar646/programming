@@ -231,3 +231,43 @@ class Queue:
         for numbers in range(self.rear+1):
             print(self.queue_list[numbers],end=" ")
         print()
+
+class Dequeue:
+
+    def __init__(self):
+        self.dequeue_list = []
+
+    def addFront(self,item):
+
+        self.dequeue_list.append(item)
+
+    def addRear(self,item):
+
+        self.dequeue_list.insert(0,item)
+
+    def removeFront(self):
+        
+        self.dequeue_list.pop()
+
+    def removeRear(self):
+
+        self.dequeue_list.pop(0)
+
+    def isEmpty(self):
+        
+        if self.dequeue_list == []:
+            return True
+
+        else:
+            return False
+
+    def size(self):
+        
+        return len(self.dequeue_list) + 1
+
+    def dispaly_dequeue_list(self):
+
+        print("Deque : ",end="")
+        for number in range(len(self.dequeue_list)):
+            print(self.dequeue_list[number],end=" ")
+        print()
