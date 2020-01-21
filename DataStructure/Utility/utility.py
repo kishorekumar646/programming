@@ -147,12 +147,14 @@ class Stack:
     def push(self,item):
         self.top += 1
         self.stack_list.append(item)
+        return
 
     def pop(self):
         if self.top == -1:
             return None
         else:
             last_element = self.stack_list[self.top]
+            self.stack_list.pop()
             self.top -= 1
             return last_element
 
@@ -166,11 +168,11 @@ class Stack:
 
     def isEmpty(self):
         
-        if self.stack_list == None:
-            return False
+        if self.top == -1:
+            return True
         
         else:
-            return True
+            return False
 
 
     def size(self):
@@ -183,7 +185,49 @@ class Stack:
         if self.top == -1:
             print("Empty")
             return
+        
         for numbers in range(self.top+1):
             print(self.stack_list[numbers],end=" ")
         print()
-        return
+        
+class Queue:
+
+    def __init__(self):
+        self.queue_list = []
+        self.front = 0
+        self.rear = -1
+
+    def enqueue(self,item):
+        self.queue_list.append(item)
+        self.rear +=1
+
+    def dequeue(self):
+        if self.rear == -1:
+            print("queue list is underflow")
+        else:
+            element = self.queue_list[self.front]
+            self.queue_list.pop(0)
+            self.rear -=1
+            return element
+
+    def isEmpty(self):
+        
+        if self.queue_list == []:
+            return True
+        
+        else:
+            return False
+
+    def size(self):
+        
+        return self.rear + 1
+
+    def dispaly_queue_list(self):
+        print("Queue : ",end="")
+        if self.rear == -1:
+            print("Empty")
+            return
+        
+        for numbers in range(self.rear+1):
+            print(self.queue_list[numbers],end=" ")
+        print()
