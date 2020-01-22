@@ -247,11 +247,11 @@ class Dequeue:
 
     def removeFront(self):
         
-        self.dequeue_list.pop()
+        return self.dequeue_list.pop()
 
     def removeRear(self):
 
-        self.dequeue_list.pop(0)
+        return self.dequeue_list.pop(0)
 
     def isEmpty(self):
         
