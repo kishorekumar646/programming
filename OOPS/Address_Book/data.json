@@ -1,0 +1,23 @@
+{ 
+    "persons" : [
+
+        {
+            "first_name" : "kishore",
+            "last_name" : "kumar",
+            "address" : "2-105",
+            "city" : "kurnool",
+            "state" : "Andhra Pradesh",
+            "zip" : "516389",
+            "phone_number" : "8008174540"
+        },
+        {
+            "first_name" : "ashok",
+            "last_name" : "kumar",
+            "address" : "2-105",
+            "city" : "Gooty RS",
+            "state" : "Andhra Pradesh",
+            "zip" : "516389",
+            "phone_number" : "7569680295"
+        }
+    ]
+}
