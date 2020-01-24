@@ -1,17 +1,7 @@
 {
     "persons": [
-        {
-            "id": 0,
-            "first_name": "",
-            "last_name": "a",
-            "address": "a",
-            "city": "a",
-            "state": "a",
-            "zip": "a",
-            "phone_number": "a"
-        }
+        
     ],
     "count": 0,
-    "file": "path",
-    "changedSinceLastSave": true
+    "file_name": "data.json"
 }
