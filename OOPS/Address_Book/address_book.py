@@ -1,27 +1,34 @@
-import person
+from person import Person
 
-class AddressBook(person.Person):
 
-    def __init__(self):
-        self.__collection = []
-        self.__count = 0
-        self.__file = "data.json"
-        self.__changedSinceLastSave = True
+class AddressBook:
+
+    def __init__(self, collection=[], count=0, file_name=None):
+        self.__collection = collection
+        self.__count = count
+        self.__file_name = file_name
 
     def getNumberOfPersons(self):
-        pass
+        return self.__count
 
-    def addPerson(self,id_number,first_name,last_name,address,city,state,zip_code,phone_number):
+    def addPerson(self, Person):
 
-        super().__init__(id_number,first_name,last_name,address,city,state,zip_code,phone_number)
+        self.__collection.append(Person)
         self.__count += 1
-        return self.toString()
-        
-    def updatePerson(self,index,address,city,state,zip_code,phone_number):
-        
+
+    def updatePerson(self, index, address, city, state, zip_code, phone_number):
+
         pass
-    def removePerson(self,index):
+
+    def removePerson(self, index):
         pass
+
+    def printAll(self):
+        for index in range(len(self.__collection)):
+            print(self.__collection[index])
+
+        print(self.__count)
+        print(self.__file_name)
 
     def sortByName(self):
         pass
@@ -30,7 +37,7 @@ class AddressBook(person.Person):
         pass
 
     def getFile(self):
-        return self.__file
+        return self.__file_name
 
     def getTitle(self):
         pass
@@ -38,12 +45,9 @@ class AddressBook(person.Person):
     def setFile(self):
         pass
 
-    def getChangedSinceLastSave(self):
-        pass
+    def to_dict(self):
+        person_dict_list = []
+        for person_obj in self.__collection:
+            person_dict_list.append(person_obj.to_dictionary())
 
-    def setChangedSinceLastSave(self):
-        pass
-
-
-
-
+        return {'persons': person_dict_list, "count": self.__count, "file_name": self.__file_name}
