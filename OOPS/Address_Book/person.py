@@ -1,44 +1,53 @@
 class Person:
 
-    def __init__(self,id_number,first_name,last_name,address,city,state,zip_code,phone_number):
-        self.__id = id_number
-        self.__first_name = first_name
-        self.__last_name = last_name
-        self.__address = address
-        self.__city = city
-        self.__state = state
-        self.__zip = zip_code
-        self.__phone_number = phone_number
-    
+    def __init__(self, dictionary={}):
+        self.firstName = dictionary['firstname']
+        self.lastName = dictionary['lastname']
+        self.address = dictionary['address']
+        self.city = dictionary['city']
+        self.state = dictionary['state']
+        self.zipcode = dictionary['zipcode']
+        self.phonenumber = dictionary['phonenumber']
+
     def getFirstName(self):
-        return self.__first_name
-    
+        return self.firstName
+
     def getLastName(self):
-        return self.__last_name
+        return self.lastName
 
     def getAddress(self):
-        return self.__address
+        return self.address
 
     def getCity(self):
-        return self.__city
+        return self.city
 
     def getState(self):
-        return self.__state
+        return self.state
 
     def getZip(self):
-        return self.__zip
+        return self.zipcode
 
     def getPhoneNumber(self):
-        return self.__phone_number
+        return self.phonenumber
 
-    def toString(self):
+    def to_dictionary(self):
         return {
-            "id" : self.__id,
-            "first_name" : self.__first_name,
-            "last_name" : self.__last_name,
-            "address" : self.__address,
-            "city" : self.__city,
-            "state" : self.__state,
-            "zip" : self.__zip,
-            "phone_number" : self.__phone_number
+            "firstname": self.firstName,
+            "lastname": self.lastName,
+            "address": self.address,
+            "city": self.city,
+            "state": self.state,
+            "zipcode": self.zipcode,
+            "phonenumber": self.phonenumber
         }
+
+    def __str__(self):
+        return f"""
+            "firstname": {self.firstName},
+            "lastname": {self.lastName},
+            "address": {self.address},
+            "city": {self.city},
+            "state": {self.state},
+            "zipcode": {self.zipcode},
+            "phonenumber": {self.phonenumber}
+        """
