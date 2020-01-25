@@ -21,14 +21,16 @@ class AddressBook:
         pass
 
     def removePerson(self, index):
-        pass
+        del self.__collection[index]
+        self.__count -= 1
 
     def printAll(self):
+        print("\npersons list : ")
         for index in range(len(self.__collection)):
             print(self.__collection[index])
 
-        print(self.__count)
-        print(self.__file_name)
+        print("count of persons : ",self.__count)
+        print("file name : ",self.__file_name)
 
     def sortByName(self):
         pass
