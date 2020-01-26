@@ -17,6 +17,12 @@ class Management:
             "appointment_avaliable": 0
         }
     
+    def remove_doctor(self,index):
+        del self.__doctors_collection[index]
+
+    def remove_patient(self,index):
+        del self.__patients_collectio[index]
+        
     def read_patient(self):
         return {
             "name": input("Enter your name : "),
