@@ -7,11 +7,17 @@ class Patients:
         self.__mobile_number = dict_patient['mobile_number']
         self.__age = dict_patient['age']        
 
-    def add_patient(self):
-        pass
+    def get_name(self):
+        return self.__name
 
-    def print_patient_list(self):
-        pass
+    def get_id_number(self):
+        return self.__id_number
+
+    def get_mobile_number(self):
+        return self.__mobile_number
+
+    def get_age(self):
+        return self.__age
 
     def to_dictionary(self):
         return {
