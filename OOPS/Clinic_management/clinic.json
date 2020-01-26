@@ -1,33 +1,39 @@
 {
-    "doctors" : [
+    "doctors": [
         {
-            "name" : "Arpith", 
-            "id_number" : "1234",
-            "Spec" : "MD", 
-            "avaliability" : "yes", 
-            "appointment_avaliable" : 3
-           
-        }, 
+            "name": "Arpith",
+            "id_number": "1234",
+            "specialization": "MD",
+            "avaliability": "yes",
+            "appointment_avaliable": 3
+        },
         {
-            "name" : "xyz", 
-            "id_number" : "12", 
-            "specialization" : "MS", 
-            "avaliability" : "no", 
-            "appointment_avaliable" : 5
+            "name": "xyz",
+            "id_number": "12",
+            "specialization": "MS",
+            "avaliability": "no",
+            "appointment_avaliable": 5
+        },
+        {
+            "name": "rr",
+            "id_number": "r",
+            "specialization": "r",
+            "avaliability": "no",
+            "appointment_avaliable": 0
         }
-    ], 
-    "patients" : [
+    ],
+    "patients": [
         {
-            "name" : "abc", 
-            "id_number" : "1234", 
-            "mobile_number" : "1234567890",
-            "age" : 22
-        }, 
+            "name": "abc",
+            "id_number": "1234",
+            "mobile_number": "1234567890",
+            "age": 22
+        },
         {
-            "name" : "pqr", 
-            "id_number" : "1234", 
-            "mobile_number" : "1234567890",
-            "age" : 24
+            "name": "pqr",
+            "id_number": "1234",
+            "mobile_number": "1234567890",
+            "age": 24
         }
     ]
 }
