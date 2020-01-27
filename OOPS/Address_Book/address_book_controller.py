@@ -22,7 +22,7 @@ class AddressBookController:
             print("\n\t-------  successfully added  --------\n")
 
         elif choice1 == 2:
-            pass
+            self.add(self.address_book_object,self.file_system_object)
 
         elif choice1 == 3:
             index = int(input("Enter index number : "))
@@ -55,4 +55,9 @@ class AddressBookController:
     def add(self, address_book_object_call, file_system_object):
 
         address_book_object_call.addPerson(Person(self.read_person()))
+        file_system_object.saveFile("data.json", address_book_object_call)
+
+    def update(self,address_book_object_call,file_system_object):
+        index = int(input("Enter index : "))
+        address_book_object_call.updatePerson(index,Person(self.read_person()))
         file_system_object.saveFile("data.json", address_book_object_call)
