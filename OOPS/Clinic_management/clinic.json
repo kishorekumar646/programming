@@ -8,13 +8,6 @@
             "appointment_avaliable": 3
         },
         {
-            "name": "xyz",
-            "id_number": "12",
-            "specialization": "MS",
-            "avaliability": "no",
-            "appointment_avaliable": 5
-        },
-        {
             "name": "rr",
             "id_number": "r",
             "specialization": "r",
@@ -25,7 +18,7 @@
     "patients": [
         {
             "name": "abc",
-            "id_number": "1234",
+            "id_number": "123",
             "mobile_number": "1234567890",
             "age": 22
         },
