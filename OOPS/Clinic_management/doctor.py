@@ -5,7 +5,7 @@
 
 class Doctor:
 
-    def __init__(self,dict_doctors={}):
+    def __init__(self, dict_doctors={}):
         self.__name = dict_doctors['name']
         self.__id_number = dict_doctors['id_number']
         self.__specialization = dict_doctors['specialization']
@@ -20,7 +20,7 @@ class Doctor:
 
     def get_specialization(self):
         return self.__specialization
-    
+
     def get_avaliability(self):
         return self.__avaliability(self)
 
