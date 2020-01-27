@@ -1,5 +1,9 @@
+"""
+    @doctor class 
 
-class Doctors:
+"""
+
+class Doctor:
 
     def __init__(self,dict_doctors={}):
         self.__name = dict_doctors['name']
