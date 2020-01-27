@@ -16,9 +16,8 @@ class AddressBook:
         self.__collection.append(Person)
         self.__count += 1
 
-    def updatePerson(self, index, address, city, state, zip_code, phone_number):
-
-        pass
+    def updatePerson(self, index, Person):
+        self.__collection[index] = Person
 
     def removePerson(self, index):
         del self.__collection[index]
