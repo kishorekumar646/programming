@@ -9,7 +9,6 @@ from doctor import Doctor
 from patient import Patient
 from clinic_manager import Management
 
-
 class FileSystem:
 
     def readFile(self, file_name):
