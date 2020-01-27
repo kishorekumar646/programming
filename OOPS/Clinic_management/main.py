@@ -1,6 +1,10 @@
 from file_system import FileSystem
 from clinic_manager import Management
 
+"""
+    Evaluate clinic management application
+
+"""
 
 if __name__ == "__main__":
 
