@@ -1,0 +1,28 @@
+.chat{
+    position: absolute;
+    width: 90%;
+    float: left;
+    border: 1px solid black;
+    margin: 0px 0px 0px 50px;
+    height: 80%;
+    border-radius: 10px;  
+}
+.user_list{
+    width: 30%;
+    height: 100%;
+    float: left;
+    background-color: #7840a1;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px ;
+    color: white;
+}
+.user{
+    width: 100%;
+    height: 10%;
+    margin: -18px 0px 0px 0px;
+    background-color: #540d88;
+    border-top-left-radius: 10px;
+}
+.chat_page{
+    float: right;
+}

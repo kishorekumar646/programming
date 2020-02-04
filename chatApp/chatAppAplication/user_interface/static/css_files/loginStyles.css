@@ -1,0 +1,69 @@
+.registerForm{
+    position: absolute;
+    width: 60%;
+    float: left;
+    border: 1px solid black;
+    margin: 70px 0px 0px 250px;
+    height: 70%;
+    border-radius: 10px;    
+}   
+.header{
+    margin: 40px 0px 0px 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: -0.5px;
+}
+#imageIcon{
+    width: 140px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 120px;
+}
+#chatApp{
+    float: right;
+    margin: -100px 90px 50px 0px;
+}
+#first_name{
+    padding: 10px 0px 10px 10px;
+    margin: 40px 0px 30px 50px;
+}
+#last_name{
+    padding: 10px 0px 10px 10px;
+}
+#email_id{
+    padding: 10px 195px 10px 10px;
+    margin: 0px 0px 30px 50px;
+}
+#password{
+    padding: 10px 0px 10px 10px;
+    margin: 0px 0px 50px 50px;
+}
+#confirm_password{
+    padding: 10px 0px 10px 10px;
+}
+#REGISTER{
+    padding: 7px 7px 7px 7px;
+    margin-left: 350px;
+    margin-top: -30;
+}
+#LOGIN{
+    padding: 7px 20px 7px 20px;
+    margin-left: 350px;
+    margin-top: 0px;
+}
+.loginAccount{
+    margin : -40px 10px 20px 48px;
+}
+.loginAccount a{
+    text-decoration: none;
+}
+#login_email_id{
+    padding: 10px 195px 10px 10px;
+    margin: 40px 0px 30px 50px;
+}
+#login_password{
+    padding: 10px 195px 10px 10px;
+    margin: 0px 0px 30px 50px;
+}
+.forgotpassword{
+    margin: -40px 0px 30px 53px;
+}
